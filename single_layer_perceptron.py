@@ -1,23 +1,47 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 import random
 
-growth_constant = .2
-n = 100000
-m = 1000
-dimension = 2
-ts_in = [[int(200 * random.random() - 100) for i in range(dimension)] for j in range(n)]
+growth_constant = .2		
+n = 100000		# number of training set inputs / output pairings
+m = 1000		# number of tests
+dimension = 2	
+ts_in = [[int(200 * random.random() - 100) for i in range(dimension)] for j in range(n)]	# generation of training set inputs
 
 # Manual output calculation
-ts_out = [[0] for _ in range(n)]
+ts_out = [[0] for _ in range(n)]	# initialize training set outputs
 
 for i in range(n):
-    if ts_in[i][0] > ts_in[i][1]:
+    if ts_in[i][0] > ts_in[i][1]:	# output is 1 when the first number in the pair is greater than the second
         ts_out[i][0] = 1
 
-inp = [[int(200 * random.random() - 100) for i in range(dimension)] for j in range(m)]
+inp = [[int(200 * random.random() - 100) for i in range(dimension)] for j in range(m)]	# generates random inputs from -100 to 99
 
-w = [(random.random() * 2 - 1) for i in range(dimension)]
+w = [(random.random() * 2 - 1) for i in range(dimension)]	# generates random weights
 
 # Training perceptron
 for i in range(n):
