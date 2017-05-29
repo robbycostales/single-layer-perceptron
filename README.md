@@ -1,7 +1,10 @@
-# perceptron
+# Single Layer Perceptron
 
-perceptron code
+Bard College at Simon's Rock  
+CMPT 370  
+Perceptron Implementation
 
-This project is avaliable through git via:
-- SSH: git@src-code.simons-rock.edu:rcostales15/perceptron.git
-- HTTPS: https://src-code.simons-rock.edu/git/rcostales15/perceptron.git
+Robby Costales
+Roop Pal
+
+Single layer perceptron implementation in Python.
